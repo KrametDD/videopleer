@@ -1,0 +1,61 @@
+:root {
+    --bg-color: #fff;
+    --text-color: #000;
+}
+
+body.dark-mode {
+    --bg-color: #333;
+    --text-color: #fff;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#content {
+    text-align: center;
+    color: var(--text-color);
+}
+
+#toggle-dark-mode {
+    position: absolute;
+    top: 20px; /* moved down 20px */
+    right: 20px;
+    }
+
+@media (max-width: 600px) {
+    #content h1 {
+        font-size: 2em;
+    }
+    #content p {
+        font-size: 1.2em;
+    }
+    #toggle-dark-mode {
+        right: 10px;
+        top: 10px;
+    }
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+footer {
+    background-color: #282828; /* slightly darker than #333 */
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
